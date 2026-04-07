@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# Rock Band - Сайт рок-группы
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-purple)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF)
 
-Currently, two official plugins are available:
+## О проекте
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Сайт рок-группы с музыкальным плеером, видеогалереей и фотогалереей. Проект создан для портфолио и демонстрации навыков веб-разработки.
 
-## React Compiler
+## Демо
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 [Посмотреть сайт](https://semeeensemeeenov23.github.io/rock-band/)
 
-## Expanding the ESLint configuration
+## Функционал
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎸 Главная страница
+- Слайдер с фотографиями
+- Видео-плеер (модальное окно)
+- Новости и анонсы туров
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎵 Аудио
+- Плеер с управлением (play/pause, громкость, прогресс-бар)
+- Дискография с тремя альбомами
+- Список треков
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🎬 Видео
+- Галерея видеоклипов
+- Модальное окно с плеером
+- Автоматическое воспроизведение
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📸 Галерея
+- Фотографии с концертов
+- Модальное окно для просмотра
+- Авто-слайдшоу
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🗓️ Туры
+- Ближайшие концерты
+- Статусы билетов
+- Архив прошедших туров
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 📧 Контакты
+- Форма обратной связи
+- Карта Google Maps
+- Контактная информация
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### ✨ Дополнительно
+- **Адаптивный дизайн** (мобильные устройства)
+- **Бургер-меню** для мобильных
+- **Плавающая гифка** (появляется через 15 сек бездействия)
+- **Анимации** (Framer Motion)
+
+## Скриншоты
+
+### Десктоп версия
+
+| Главная страница | Аудио страница |
+|-----------------|----------------|
+| ![Главная страница](./public/screenshot-desktop-1.jpg) | ![Аудио страница](./public/screenshot-desktop-2.jpg) |
+
+| Видео страница | Галерея |
+|----------------|---------|
+| ![Видео страница](./public/screenshot-desktop-3.jpg) | ![Галерея](./public/screenshot-desktop-4.jpg) |
+
+### Мобильная версия
+
+| Главная (мобильная) | Меню (мобильное) |
+|---------------------|------------------|
+| ![Главная мобильная](./public/screenshot-mobile-1.jpg) | ![Мобильное меню](./public/screenshot-mobile-2.jpg) |
+
+## Технологии
+
+- **React 19** + TypeScript
+- **Vite** (сборщик)
+- **Tailwind CSS 4** (стилизация)
+- **Framer Motion** (анимации)
+- **React Icons** (иконки)
+
+## Установка и запуск
+
+```bash
+# Клонировать репозиторий
+git clone https://github.com/semeeensemeeenov23/rock-band.git
+
+# Перейти в папку проекта
+cd rock-band
+
+# Установить зависимости
+npm install
+
+# Запустить проект локально
+npm run dev
