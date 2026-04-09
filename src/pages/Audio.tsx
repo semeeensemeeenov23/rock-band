@@ -280,19 +280,19 @@ export default function Audio({ setCurrentPage }: AudioProps) {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="bg-[url('/bg-top.jpg')] bg-no-repeat bg-center-top min-h-[100px] md:min-h-[131px] bg-cover"
+          className="bg-[url('/bg-top.jpg')] bg-no-repeat bg-center-top min-h-25 md:min-h-32.75 bg-cover"
         >
-          <div className="max-w-[960px] mx-auto px-4">
-            <h1 className="pt-[20px] md:pt-[39px] pl-[20px] md:pl-[357px]">
-              <button onClick={() => setCurrentPage("home")} className="block w-[180px] md:w-[246px] h-[50px] md:h-[62px] text-indent-[-5000px] bg-[url('/logo.png')] bg-no-repeat bg-contain" />
+          <div className="max-w-240 mx-auto px-4">
+            <h1 className="pt-5 md:pt-9.75 pl-5 md:pl-[357px]">
+              <button onClick={() => setCurrentPage("home")} className="block w-45 md:w-61.5 h-12.5 md:h-15.5 text-indent-[-5000px] bg-[url('/logo.png')] bg-no-repeat bg-contain" />
             </h1>
           </div>
         </motion.div>
 
         <div className="bg-[url('/menu-bg-tail.gif')] repeat-x">
           <div className="bg-[url('/menu-bg.jpg')] bg-no-repeat bg-center bg-cover">
-            <div className="max-w-[960px] mx-auto px-4">
-              <div className="flex justify-between items-center py-2 md:py-[10px]">
+            <div className="max-w-240 mx-auto px-4">
+              <div className="flex justify-between items-center py-2 md:py-2.5">
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className="md:hidden text-white text-2xl z-50 relative p-2 hover:text-[#93ceee] transition-colors"
@@ -369,7 +369,7 @@ export default function Audio({ setCurrentPage }: AudioProps) {
       </header>
 
       <section id="content" className="relative z-10 py-8 md:py-12">
-        <div className="max-w-[960px] mx-auto px-4">
+        <div className="max-w-240 mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
