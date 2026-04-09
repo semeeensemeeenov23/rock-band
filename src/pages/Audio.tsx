@@ -53,7 +53,7 @@ export default function Audio({ setCurrentPage }: AudioProps) {
         "02. Электрический шторм",
         "03. Бесконечный драйв",
         "04. Рок навсегда",
-        "05. Пульс города",
+        "05. Пульс нового города",
         "06. Свободное падение",
         "07. Металлические крылья",
         "08. Гром среди ясного неба",
@@ -280,19 +280,19 @@ export default function Audio({ setCurrentPage }: AudioProps) {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="bg-[url('/bg-top.jpg')] bg-no-repeat bg-center-top min-h-[100px] md:min-h-[131px] bg-cover"
+          className="bg-[url('/bg-top.jpg')] bg-no-repeat bg-center-top min-h-25 md:min-h-32.75 bg-cover"
         >
-          <div className="max-w-[960px] mx-auto px-4">
-            <h1 className="pt-[20px] md:pt-[39px] pl-[20px] md:pl-[357px]">
-              <button onClick={() => setCurrentPage("home")} className="block w-[180px] md:w-[246px] h-[50px] md:h-[62px] text-indent-[-5000px] bg-[url('/logo.png')] bg-no-repeat bg-contain" />
+          <div className="max-w-240 mx-auto px-4">
+            <h1 className="pt-5 md:pt-9.75 pl-5 md:pl-89.25">
+              <button onClick={() => setCurrentPage("home")} className="block w-45 md:w-61.5 h-12.5 md:h-15.5 text-indent-[-5000px] bg-[url('/logo.png')] bg-no-repeat bg-contain" />
             </h1>
           </div>
         </motion.div>
 
         <div className="bg-[url('/menu-bg-tail.gif')] repeat-x">
           <div className="bg-[url('/menu-bg.jpg')] bg-no-repeat bg-center bg-cover">
-            <div className="max-w-[960px] mx-auto px-4">
-              <div className="flex justify-between items-center py-2 md:py-[10px]">
+            <div className="max-w-240 mx-auto px-4">
+              <div className="flex justify-between items-center py-2 md:py-2.5">
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className="md:hidden text-white text-2xl z-50 relative p-2 hover:text-[#93ceee] transition-colors"
@@ -307,8 +307,8 @@ export default function Audio({ setCurrentPage }: AudioProps) {
                         key={item.name}
                         className={`
                           relative
-                          ${index === 0 ? "pl-0" : "bg-[url('/menu-li-line.png')] bg-no-repeat bg-left-top pl-[34px]"}
-                          ${index === menuItems.length - 1 ? "pr-0" : "pr-[34px]"}
+                          ${index === 0 ? "pl-0" : "bg-[url('/menu-li-line.png')] bg-no-repeat bg-top-left pl-8.5"}
+                          ${index === menuItems.length - 1 ? "pr-0" : "pr-8.5"}
                         `}
                       >
                         <button
@@ -369,7 +369,7 @@ export default function Audio({ setCurrentPage }: AudioProps) {
       </header>
 
       <section id="content" className="relative z-10 py-8 md:py-12">
-        <div className="max-w-[960px] mx-auto px-4">
+        <div className="max-w-240 mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -388,7 +388,7 @@ export default function Audio({ setCurrentPage }: AudioProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-2xl border border-purple-500/30"
+            className="mb-12 p-6 bg-linear-to-r from-purple-900/20 to-pink-900/20 rounded-2xl border border-purple-500/30"
           >
             <h4 className="text-center text-white text-lg mb-4 flex items-center justify-center gap-2">
               <FaHeadphones /> Слушать на платформах:
@@ -416,7 +416,7 @@ export default function Audio({ setCurrentPage }: AudioProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: albumIndex * 0.2 }}
                 viewport={{ once: true }}
-                className={`bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border transition-all duration-300 ${
+                className={`bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border transition-all duration-300 ${
                   currentAlbum === album.id 
                     ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
                     : 'border-gray-700 hover:border-purple-500/50'
@@ -505,9 +505,9 @@ export default function Audio({ setCurrentPage }: AudioProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-gray-900 to-black border-t border-purple-500/50 z-50 shadow-2xl"
+            className="fixed bottom-0 left-0 right-0 bg-linear-to-r from-gray-900 to-black border-t border-purple-500/50 z-50 shadow-2xl"
           >
-            <div className="max-w-[1200px] mx-auto px-4 py-4">
+            <div className="max-w-300 mx-auto px-4 py-4">
               <div className="flex flex-col md:flex-row items-center gap-4">
                 <div className="flex items-center gap-3 w-full md:w-1/4">
                   <img
@@ -515,7 +515,7 @@ export default function Audio({ setCurrentPage }: AudioProps) {
                     alt={currentAlbumData.title}
                     className="w-12 h-12 rounded-lg object-cover"
                   />
-                  <div className="flex-grow min-w-0">
+                  <div className="grow min-w-0">
                     <p className="text-white text-sm font-semibold truncate">
                       {currentAlbumData.tracks[currentTrack]}
                     </p>
@@ -550,11 +550,11 @@ export default function Audio({ setCurrentPage }: AudioProps) {
                   <div className="flex items-center gap-2">
                     <span className="text-gray-400 text-xs">{formatTime(currentTime)}</span>
                     <div
-                      className="flex-grow h-1 bg-gray-700 rounded-full cursor-pointer relative group"
+                      className="grow h-1 bg-gray-700 rounded-full cursor-pointer relative group"
                       onClick={handleSeek}
                     >
                       <div
-                        className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full relative"
+                        className="h-full bg-linear-to-r from-purple-500 to-pink-500 rounded-full relative"
                         style={{ width: `${progress}%` }}
                       >
                         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -586,8 +586,8 @@ export default function Audio({ setCurrentPage }: AudioProps) {
         )}
       </AnimatePresence>
 
-      <footer className="mt-12 md:mt-16 bg-gradient-to-b from-gray-900 to-black border-t border-purple-900/50 relative z-20">
-        <div className="max-w-[1200px] mx-auto px-4 py-6 md:py-8">
+      <footer className="mt-12 md:mt-16 bg-linear-to-b from-gray-900 to-black border-t border-purple-900/50 relative z-20">
+        <div className="max-w-300 mx-auto px-4 py-6 md:py-8">
           <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-xs md:text-sm">
               © {new Date().getFullYear()} | Все права защищены
